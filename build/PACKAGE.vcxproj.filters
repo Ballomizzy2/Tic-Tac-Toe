@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\build\CMakeFiles\da8bd0e56b2f3c0664c15bf0dced2c10\PACKAGE_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0CD01EB4-956C-35C4-8DCF-0B6B0B5A3A2B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

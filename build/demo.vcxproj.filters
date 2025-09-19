@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\imgui\imgui_demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\imgui\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\imgui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\classes\Bit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\classes\BitHolder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\classes\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\classes\Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\classes\Square.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\classes\TicTacToe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\imgui\imgui_impl_dx11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\main_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\imgui\imgui_impl_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Owner\Documents\School\tic-tac-toe-assignment-main\tic-tac-toe-assignment-main\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{34DA3FF1-1F75-3B8C-9904-DB4F0AA7BAD3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
