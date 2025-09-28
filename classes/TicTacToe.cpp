@@ -202,4 +202,18 @@ void TicTacToe::setStateString(const std::string &s)
 void TicTacToe::updateAI()
 {
     // Implement in next assignment
+    // Only act on the AI's turn
+    if (getCurrentPlayer()->playerNumber() != AI_PLAYER) return;
+
+    // Next-available-spot = left-to-right, top-to-bottom
+    for (int y = 0; y < 3; ++y) {
+        for (int x = 0; x < 3; ++x) {
+            if (_grid[y][x].empty()) {
+                actionForEmptyHolder(&_grid[y][x]);
+                endTurn();
+
+                return;
+            }
+        }
+    }
 }
