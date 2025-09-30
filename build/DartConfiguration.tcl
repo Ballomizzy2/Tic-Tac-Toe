@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: C:/Users/Owner/Documents/School/tic-tac-toe-assignment-main/tic-tac-toe-assignment-main
-BuildDirectory: C:/Users/Owner/Documents/School/tic-tac-toe-assignment-main/tic-tac-toe-assignment-main/build
+SourceDirectory: C:/Users/Owner/Documents/School/Tic-Tac-Toe
+BuildDirectory: C:/Users/Owner/Documents/School/Tic-Tac-Toe/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -27,7 +27,7 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Users/Owner/Documents/School/tic-tac-toe-assignment-main/tic-tac-toe-assignment-main"
+ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Users/Owner/Documents/School/Tic-Tac-Toe"
 MakeCommand: "C:\Program Files\CMake\bin\cmake.exe" --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
@@ -45,7 +45,7 @@ SVNOptions:
 SVNUpdateOptions: 
 
 # Git options
-GITCommand: 
+GITCommand: C:/Program Files/Git/cmd/git.exe
 GITInitSubmodules: 
 GITUpdateOptions: 
 GITUpdateCustom: 
@@ -58,9 +58,9 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: 
+UpdateCommand: C:/Program Files/Git/cmd/git.exe
 UpdateOptions: 
-UpdateType: 
+UpdateType: git
 
 # Compiler info
 Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x86/cl.exe

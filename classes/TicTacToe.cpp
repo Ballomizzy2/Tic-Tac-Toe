@@ -29,7 +29,7 @@
 // -----------------------------------------------------------------------------
 
 const int AI_PLAYER   = 1;      // index of the AI player (O)
-const int HUMAN_PLAYER= 0;      // index of the human player (X)
+const int HUMAN_PLAYER= -1;      // index of the human player (X)
 
 TicTacToe::TicTacToe()
 {
@@ -70,6 +70,7 @@ void TicTacToe::setUpBoard()
         }
     }
 
+    setAIPlayer(AI_PLAYER);
     startGame();
 }
 
@@ -199,21 +200,93 @@ void TicTacToe::setStateString(const std::string &s)
     }
 }
 
-void TicTacToe::updateAI()
+void TicTacToe::updateAI() 
 {
-    // Implement in next assignment
-    // Only act on the AI's turn
-    if (getCurrentPlayer()->playerNumber() != AI_PLAYER) return;
+    int bestVal = -1000;
+    Square* bestMove = nullptr;
+    std::string state = stateString();
 
-    // Next-available-spot = left-to-right, top-to-bottom
-    for (int y = 0; y < 3; ++y) {
-        for (int x = 0; x < 3; ++x) {
-            if (_grid[y][x].empty()) {
-                actionForEmptyHolder(&_grid[y][x]);
-                endTurn();
-
-                return;
+    // Traverse all cells, evaluate minimax function for all empty cells
+    // Clear current
+    for (int y = 0; y < 3; ++y)
+    {
+        for (int x = 0; x < 3; ++x)
+        {
+            int index = y * 3 + x;
+            // Check if cell is empty
+            if (state[index] == '0') {
+                // Make the move
+                state[index] = '2';
+                int moveVal = -negamax(state, 0, HUMAN_PLAYER);
+                // Undo the move
+                state[index] = '0';
+                // If the value of the current move is more than the best value, update best
+                if (moveVal > bestVal) {
+                    bestMove = &_grid[y][x];
+                    bestVal = moveVal;
+                }
             }
         }
     }
+
+
+    // Make the best move
+    if(bestMove) {
+        if (actionForEmptyHolder(bestMove)) {
+            endTurn();
+        }
+    }
+}
+
+bool isAIBoardFull(const std::string& state) {
+    return state.find('0') == std::string::npos;
+}
+
+int evaluateAIBoard(const std::string& state) {
+    static const int kWinningTriples[8][3] =  { {0,1,2}, {3,4,5}, {6,7,8},  // rows
+                                                {0,3,6}, {1,4,7}, {2,5,8},  // cols
+                                                {0,4,8}, {2,4,6} };         // diagonals
+    for( int i=0; i<8; i++ ) {
+        const int *triple = kWinningTriples[i];
+        char first = state[triple[0]];
+        if( first != '0' && first == state[triple[1]] && first == state[triple[2]] ) {
+            return 10;   // someone won, negamax will handle who
+        }
+    }
+    return 0; // No winner
+}
+
+//
+// player is the current player's number (AI or human)
+//
+int TicTacToe::negamax(std::string& state, int depth, int playerColor) 
+{
+    int score = evaluateAIBoard(state);
+
+    // Check if AI wins, human wins, or draw
+    if(score) { 
+        // A winning state is a loss for the player whose turn it is.
+        // The previous player made the winning move.
+        return -score; 
+    }
+
+    if(isAIBoardFull(state)) {
+        return 0; // Draw
+    }
+
+    int bestVal = -1000; // Min value
+    for (int y = 0; y < 3; y++) {
+        for (int x = 0; x < 3; x++) {
+            // Check if cell is empty
+            if (state[y * 3 + x] == '0') {
+                // Make the move
+                state[y * 3 + x] = playerColor == HUMAN_PLAYER ? '1' : '2'; // Set the cell to the current player's color
+                bestVal = std::max(bestVal, -negamax(state, depth + 1, -playerColor));
+                // Undo the move for backtracking
+                state[y * 3 + x] = '0';
+            }
+        }
+    }
+
+    return bestVal;
 }

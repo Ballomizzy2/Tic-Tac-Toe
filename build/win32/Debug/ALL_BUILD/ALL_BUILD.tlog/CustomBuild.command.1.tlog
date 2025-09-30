@@ -1,6 +1,6 @@
-^C:\USERS\OWNER\DOCUMENTS\SCHOOL\TIC-TAC-TOE-ASSIGNMENT-MAIN\TIC-TAC-TOE-ASSIGNMENT-MAIN\CMAKELISTS.TXT
+^C:\USERS\OWNER\DOCUMENTS\SCHOOL\TIC-TAC-TOE\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Owner/Documents/School/tic-tac-toe-assignment-main/tic-tac-toe-assignment-main -BC:/Users/Owner/Documents/School/tic-tac-toe-assignment-main/tic-tac-toe-assignment-main/build --check-stamp-file C:/Users/Owner/Documents/School/tic-tac-toe-assignment-main/tic-tac-toe-assignment-main/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Owner/Documents/School/Tic-Tac-Toe -BC:/Users/Owner/Documents/School/Tic-Tac-Toe/build --check-stamp-file C:/Users/Owner/Documents/School/Tic-Tac-Toe/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
