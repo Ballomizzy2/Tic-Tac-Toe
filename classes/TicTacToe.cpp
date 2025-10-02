@@ -7,9 +7,6 @@
 // -----------------------------------------------------------------------------
 // TicTacToe.cpp
 // -----------------------------------------------------------------------------
-// This file is intentionally *full of comments* and gentle TODOs that guide you
-// through wiring up a complete Tic‑Tac‑Toe implementation using the game engine’s
-// Bit / BitHolder grid system.
 //
 // Rules recap:
 //  - Two players place X / O on a 3x3 grid.
@@ -24,8 +21,6 @@
 //  - Game options     : let the mouse know the grid is 3x3 (rowX, rowY)
 //  - Helpers you’ll see used: setNumberOfPlayers, getPlayerAt, startGame, etc.
 //
-// I’ve already fully implemented PieceForPlayer() for you. Please leave that as‑is.
-// The rest of the routines are written as “comment-first” TODOs for you to complete.
 // -----------------------------------------------------------------------------
 
 const int AI_PLAYER   = 1;      // index of the AI player (O)
